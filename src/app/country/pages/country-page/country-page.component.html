@@ -1,0 +1,149 @@
+<h1 class="mt-3">Selectores anidados</h1>
+<hr />
+
+<form>
+  <!-- Region -->
+  <div class="row mb-3">
+    <div class="col">
+      <label class="form-label">Continente:</label>
+      <select formControlName="region" class="form-control">
+        <option value="">-- Seleccione Continente --</option>
+        
+        <!-- <option [value]="region">
+          {{ region }}
+        </option> -->
+        
+      </select>
+    </div>
+  </div>
+
+  <!-- Countries -->
+
+  <div class="row mb-3">
+    <div class="col">
+      <label class="form-label">País:</label>
+      <select formControlName="country" class="form-control">
+        <option value="">-- Seleccione País --</option>
+
+        <!-- <option [value]="country.cca3">
+          {{ country.name }}
+        </option> -->
+
+      </select>
+    </div>
+  </div>
+
+
+  <!-- Countries -->
+
+  <div class="row mb-3">
+    <div class="col">
+      <label class="form-label">Fronteras:</label>
+      <select formControlName="border" class="form-control">
+        <option value="">-- Seleccione la frontera --</option>
+
+
+        <!-- <option [value]="country.cca3">
+          {{ country.name }}
+        </option> -->
+      </select>
+    </div>
+  </div>
+
+</form>
+
+<h3>Formulario</h3>
+<code>
+  <!-- {{ 'myForm.value' | json }} -->
+</code>
+<p>is form valid: {{ 'myForm.valid' }}</p>
+dynamic.html
+<h2>Reactivos: <small> Dinámicos </small></h2>
+<hr>
+
+<form autocomplete="off">
+
+    <!-- Nombre -->
+    <div class="mb-3 row">
+        <label class="col-sm-3 col-form-label">Nombre</label>
+        <div class="col-sm-9">
+            <input class="form-control"
+                   placeholder="Nombre de la persona">
+            <span class="form-text text-danger">
+                   error message
+            </span>
+        </div>
+    </div>
+
+    <!-- Agregar Favorito -->
+    <div class="mb-3 row">
+        <label class="col-sm-3 col-form-label">Agregar</label>
+        <div class="col-sm-9">
+
+            <div class="input-group">
+                <input class="form-control"
+                       placeholder="Agregar favorito">
+
+
+                <button class="btn btn-outline-primary"
+                        type="button">
+                    Agregar favorito
+                </button>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Lista de Juegos Favoritos -->
+    <div class="mb-3 row">
+        <label class="col-sm-3 col-form-label">Favoritos</label>
+        <div class="col-sm-9">
+
+            <div class="mb-1">
+
+                <div class="input-group">
+                    <input class="form-control">
+
+                    <button class="btn btn-outline-danger"
+                            type="button">
+                      Eliminar
+                  </button>
+                </div>
+                <span class="form-text text-danger">
+                   Este campo es requerido
+                </span>
+
+            </div>
+
+        </div>
+    </div>
+
+
+
+    <div class="row">
+        <div class="col-sm-12">
+            <button type="submit"
+                    class="btn btn-primary float-end"
+                    >
+                    <!-- [disabled]="myForm.invalid" -->
+                Guardar
+            </button>
+        </div>
+    </div>
+
+
+</form>
+
+
+
+<span>Valid</span>
+<pre>{{ 'object' | json }}</pre>
+<br>
+
+<span>Value</span>
+<pre>{{ 'object' | json }}</pre>
+<br>
+
+<span>Agregar Juego</span>
+<pre>{{ 'object' | json }}</pre>
+<pre>{{ 'object' | json }}</pre>
